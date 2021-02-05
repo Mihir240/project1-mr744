@@ -11,11 +11,14 @@ def main_app():
     
     #retrieve token
     spot_obj = Spotify(url, os.getenv("client_id"), os.getenv("client_secret"))
-    
-    
     token = spot_obj.get_token()
     
+    #I am going to add this in my newclass branch
+    
     # print(f'The token is: {token}')
+    
+    #initialize top ten artists
+    
     
     return render_template(
         'index.html',
