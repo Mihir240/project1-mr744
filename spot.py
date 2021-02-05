@@ -3,7 +3,6 @@ import os
 import json
 from dotenv import load_dotenv, find_dotenv
 
-
 class Spotify:
     def __init__(self, url: str, client_id: str, client_secret: str):
         self.url = url
@@ -26,7 +25,10 @@ class Spotify:
         #retrieve our token
         return response.json()['access_token']
     
-                
+    # def get_artists:
+    
+    
+    # def shuffle():
                 
             
 
