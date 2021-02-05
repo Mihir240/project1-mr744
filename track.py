@@ -1,39 +1,30 @@
 class Track:
-    def __init__(self, json_obj:dict):
-        self.json_obj = json_obj
+    def __init__(self,song_name=None,song_artist=None,song_image=None,song_prev_url=None):
+        self.song_name = song_name
+        self.song_artist = song_artist
+        self.song_image = song_image
+        self.song_prev_url = song_prev_url
+
+    def get_song_name(self):
+        return self.song_name
         
-        self.song_name = None
-        self.song_artist = None
-        self.song_image = None
-        self.song_prev_url = None
+    def get_song_artist(self):
+        return self.song_artist
         
-        self.extract_info()
+    def get_song_image(self):
+        return self.song_image
         
-    def authenticate(self):
-        
-        
-        
-    def extract_info(self):
-        
-        for t_info in 
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    def get_song_prev_url(self):
+        return self.song_prev_url
+
+
+#------------------END OF CLASS----------------------
+
+
+
         
         
     
-    def get_song_name(self):
-        
-
-
-
-
 
 
 
