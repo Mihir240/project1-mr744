@@ -28,7 +28,7 @@ def extract_track_info(json_obj: dict) -> list:
             )
             
     return random.sample(all_tracks,3)
-    
+
 @app.route('/')
 def main_app():
     
@@ -47,9 +47,20 @@ def main_app():
     #pass it into 
     list_of_tracks = extract_track_info(json_obj)
     
+    
+    artist = sp.artist(selected_id)
+    #artist image url
+    image_of_artist = artist['images'][2]['url']
+    
+    #artist name
+    artist_name = artist['name']
+    
+    print(image_of_artist)
     return render_template(
         'index.html',
         all_tracks = list_of_tracks,
+        url_artist = image_of_artist,
+        artist_name = artist_name,
     )
 
 app.run(
