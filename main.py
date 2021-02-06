@@ -11,16 +11,16 @@ def extract_track_info(json_obj: dict) -> list:
     all_tracks = []
     
     #traverse the json_obj
-    for info in json_obj['tracks'][:3]:
-        print(f"Song artist: {info['artists'][0]['name']}")
-        print(f"Song name: {info['name']} ")
-        print(f"Song image: {info['album']['images'][2]['url']}")
-        print(f"Song preview url: {info['preview_url']}")
-        print(" ")
+    for info in json_obj['tracks'][:10]:
+        # print(f"Song artist: {info['artists'][0]['name']}")
+        # print(f"Song name: {info['name']} ")
+        # print(f"Song image: {info['album']['images'][2]['url']}")
+        # print(f"Song preview url: {info['preview_url']}")
+        # print(" ")
         
         song_artist = info['artists'][0]['name']
         song_name = info['name']
-        song_image = info['album']['images'][2]['url']
+        song_image = info['album']['images'][1]['url']
         song_url = info['preview_url']
         
         
@@ -31,14 +31,11 @@ def extract_track_info(json_obj: dict) -> list:
                 song_url,
                 )
             )
-        
-    return all_tracks
+            
+    return random.sample(all_tracks,3)
     
 @app.route('/')
 def main_app():
-    
-    # client_credentials_manager = SpotifyClientCredentials(client_id=os.getenv("client_id"), client_secret=os.getenv("client_secret"))
-    # sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
     
     #spotify object handle
     sp = spot_obj()
@@ -51,8 +48,6 @@ def main_app():
     
     #pass json format in the track obj
     json_obj = sp.artist_top_tracks(selected_id,country='US')
-    
-    
     
     #pass it into 
     list_of_tracks = extract_track_info(json_obj)
@@ -67,6 +62,7 @@ def main_app():
     
     return render_template(
         'index.html',
+        all_tracks = list_of_tracks,
     )
 
 app.run(

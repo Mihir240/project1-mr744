@@ -2,3 +2,28 @@ body{
     background-color: #64b5f6;
     font-family: Arial;
 }
+
+img.front-img{
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    top: 2rem;
+    right: 4rem;
+}
+
+
+div.jumbo{
+    background-color:blue;
+    text-align: center;
+    width: 45rem;
+    height: 12rem;
+    /*margin: auto;*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1{
+    display: inline-block;
+    font-size: 4rem;
+}
+
