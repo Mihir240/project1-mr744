@@ -8,8 +8,8 @@
     <body>
         
         <div class="jumbo"> 
-            <img src="{{url_artist}}"  class='front-img'></img>
-            <h1>{{artist_name}}</h1>
+            <img src="{{artist_info[0]}}"  class='front-img'></img>
+            <h1>{{artist_info[1]}}</h1>
         </div>
         
         <div class='list-tracks'>
@@ -21,9 +21,6 @@
                    <h4 class='song-text'>By {{all_tracks[i].get_song_artist()}}</h4>
               </div>
         {%endfor%} 
-            
-            
-            
         </div>
     </body>
 </html>

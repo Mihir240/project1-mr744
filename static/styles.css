@@ -30,6 +30,8 @@ div.jumbo{
 h1{
     display: inline-block;
     font-size: 4rem;
+    position:relative;
+    bottom:1.5rem;
 }
 img.track-align{
     position: relative;
