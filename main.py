@@ -12,12 +12,7 @@ def extract_track_info(json_obj: dict) -> list:
     
     #traverse the json_obj
     for info in json_obj['tracks'][:10]:
-        # print(f"Song artist: {info['artists'][0]['name']}")
-        # print(f"Song name: {info['name']} ")
-        # print(f"Song image: {info['album']['images'][2]['url']}")
-        # print(f"Song preview url: {info['preview_url']}")
-        # print(" ")
-        
+
         song_artist = info['artists'][0]['name']
         song_name = info['name']
         song_image = info['album']['images'][1]['url']
@@ -51,14 +46,6 @@ def main_app():
     
     #pass it into 
     list_of_tracks = extract_track_info(json_obj)
-    
-    
-    # print(sp.artist_top_tracks("1Xyo4u8uXC1ZmMpatF05PJ", country='US'))
-    # print(json_obj)
-    print(list_of_tracks[0].get_song_name())
-    print(list_of_tracks[0].get_song_artist())
-    print(list_of_tracks[0].get_song_image())
-    print(list_of_tracks[0].get_song_prev_url())
     
     return render_template(
         'index.html',
