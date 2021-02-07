@@ -8,18 +8,19 @@
     <body>
         
         <div class="jumbo"> 
-            <img src="{{all_tracks[0].get_song_image()}}"  class='front-img'></img>
-            <h1>{{all_tracks[0].get_song_artist()}}</h1>
+            <img src="{{artist_info[0]}}"  class='front-img'></img>
+            <h1>{{artist_info[1]}}</h1>
         </div>
         
-        <h1>Top Hits!</h1>
-        
-
-        <div> Song: {{all_tracks[0].get_song_name()}} </div>
-        <div> Artist: {{all_tracks[0].get_song_artist()}} </div>
-        <div> <img src={{all_tracks[0].get_song_image()}} ></img></div>
-        <div> <audio controls src={{all_tracks[0].get_song_prev_url()}}> </audio></audio> </div>
-        
-        
+        <div class='list-tracks'>
+        {%for i in range(3)%} 
+              <div class='cover'>
+                   <img class='track-align'src={{all_tracks[i].get_song_image()}} ></img>
+                   <audio class='audio-align' controls src={{all_tracks[i].get_song_prev_url()}}> </audio>
+                   <h3 class='song-text'>{{all_tracks[i].get_song_name()}}</h3>
+                   <h4 class='song-text'>By {{all_tracks[i].get_song_artist()}}</h4>
+              </div>
+        {%endfor%} 
+        </div>
     </body>
 </html>

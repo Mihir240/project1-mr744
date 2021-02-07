@@ -1,10 +1,11 @@
 body{
-    background-color: #64b5f6;
+    background-color: #e6e6e7;
     font-family: Arial;
 }
 
 img.front-img{
-    width: 100px;
+    width: 9rem;
+    height: 9rem;
     border-radius: 50%;
     position: relative;
     top: 2rem;
@@ -13,17 +14,49 @@ img.front-img{
 
 
 div.jumbo{
-    background-color:blue;
+    background-color:white;
     text-align: center;
     width: 45rem;
     height: 12rem;
-    /*margin: auto;*/
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
+    margin-top:2rem;
+    border-radius: 1.25rem;
 }
 
 h1{
     display: inline-block;
     font-size: 4rem;
+    position:relative;
+    bottom:1.5rem;
+}
+img.track-align{
+    position: relative;
+    height: 18.75rem;
+    width: 22rem;
+    border-radius: 1.125rem 1.125rem 0 0;
 }
 
+audio.audio-align{
+    width: 22rem;
+}
+
+div.cover{
+    background-color: white;
+    /*display: inline-grid;*/
+    width: 22rem;
+    height: 30rem;
+    border-radius: 1.125rem;
+}
+
+.song-text{
+    display: flex;
+    justify-content: center;
+}
+
+.list-tracks{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 2rem;
+    margin-bottom: 10rem;
+}
