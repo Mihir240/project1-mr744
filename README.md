@@ -76,7 +76,7 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
    4) Don't forget to add your `.env` file to the `.gitignore` file
    
    
-## 3 Technical Issue Encountered in My Project and Fixes
+## Technical Issue Encountered in My Project and Fixes
 1) One simple mistake but was quite time consuming mistake I faced was forgetting to add the line `load_dotenv(find_dotenv())` in my `cred.py` file. This caused much frustration 
    because I was getting invalid credential errors and was therefore not able to access the Web API. To resolve this issue, I first hardcoded my client_secret and client_id to 
    see if they would work and fortunately they worked. So I quickly realized that something was wrong in my .env file and maybe I spelt the variables wrong. But that wasn't the
@@ -86,15 +86,16 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
    all good. Then I went over to Slack to see if anyone else was facing similar issues. And several students were having similar issues and in a pinned post it said that we had
    to hard refresh our browser page to ensure the CSS got updated. So all we had to do was `CTRL F5` on windows to update the CSS!
    
-3) 
-
+3) I had a hard time extracting song information from the the JSON metadata. For example, If I thought I was targeting the song image, I kept on getting key errors or index 
+   errors in my Python code. One step I took was to use a [JSON formatter from online](https://jsonformatter.curiousconcept.com/#) so I could get a better understanding of how 
+   the JSON data looked like and how I would need to target the data that I needed.
 
 ## Known Problems
-
-
+1) One slight issue with my project but one that won't impact the functionality is when a song name is too long. The song name would push down the artist name in the HTML file 
+   and this would create an overlap between the card and background (essentially placing it out of its correct place in the HTML).
 
 ## Improving the Project in the future
- 
+1) 
  
   
 
