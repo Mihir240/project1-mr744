@@ -6,7 +6,21 @@
   
     </head>
     <body>
-        <h1>Top Hits!</h1>
-            
+        
+        <div class="jumbo"> 
+            <img src="{{artist_info[0]}}"  class='front-img'></img>
+            <h1>{{artist_info[1]}}</h1>
+        </div>
+        
+        <div class='list-tracks'>
+        {%for i in range(3)%} 
+              <div class='cover'>
+                   <img class='track-align'src={{all_tracks[i].get_song_image()}} ></img>
+                   <audio class='audio-align' controls src={{all_tracks[i].get_song_prev_url()}}> </audio>
+                   <h3 class='song-text'>{{all_tracks[i].get_song_name()}}</h3>
+                   <h4 class='song-text'>By {{all_tracks[i].get_song_artist()}}</h4>
+              </div>
+        {%endfor%} 
+        </div>
     </body>
 </html>
