@@ -68,11 +68,32 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
      1. `export client_id='your client id'`
      2. `export client_secret='your client secret'`
   3) In `cred.py` import and include the following:
-     1. `from dotenv import load_dotenv, find_dotenv
+     1. `from dotenv import load_dotenv, find_dotenv`
      2. `import os`
      3. `load_dotenv(find_dotenv())`
      4. `os.getenv('cliend_id')`
      5. `os.getenv('client_secret')`
+   4) Don't forget to add your `.env` file to the `.gitignore` file
+   
+   
+## 3 Technical Issue Encountered in My Project and Fixes
+1) One simple mistake but was quite time consuming mistake I faced was forgetting to add the line `load_dotenv(find_dotenv())` in my `cred.py` file. This caused much frustration 
+   because I was getting invalid credential errors and was therefore not able to access the Web API. To resolve this issue, I first hardcoded my client_secret and client_id to 
+   see if they would work and fortunately they worked. So I quickly realized that something was wrong in my .env file and maybe I spelt the variables wrong. But that wasn't the
+   case. I then rewatched the Demo on 'Hiding our API Keys' and soon realized that I was missing the `load_dotenv(find_dotenv())` in my `cred.py`.
+
+2) On Cloud9, whenever I updated my CSS file, the Html never updated. So the first step I took was to check if the CSS syntax was all good. And upon reviewing, the syntax was 
+   all good. Then I went over to Slack to see if anyone else was facing similar issues. And several students were having similar issues and in a pinned post it said that we had
+   to hard refresh our browser page to ensure the CSS got updated. So all we had to do was `CTRL F5` on windows to update the CSS!
+   
+3) 
+
+
+## Known Problems
+
+
+
+## Improving the Project in the future
  
  
   
