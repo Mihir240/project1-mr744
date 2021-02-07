@@ -28,6 +28,9 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
  #### About
  The Spotify Web API essentially allows us to use its endpoints to retreive JSON metadata about music artists, albums, and
  tracks, directly from the Spotify Data Catalogue. The API is based on the [REST Principles](https://restfulapi.net/)!
+ 
+ #### Installtaion
+ 1) `pip install requests` or `sudo pip install requests`
 
  #### Setup
  1) Head over to www.spotify.com to create a free user account! Then follow these [instructions](https://developer.spotify.com/documentation/general/guides/app-settings/) for registering your application.
@@ -40,11 +43,37 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
  1) [Official Spotify Web API Docs](https://developer.spotify.com/documentation/web-api/)
  2) [Client Credenitals Flow Hint](https://stmorse.github.io/journal/spotify-api.html)
 
-### Spotipy
+### Spotipy (Optional)
 ---
--
-  
-  #### Installation
+ #### About
+ Spotipy is a lightweight Python library which will help us retrieve the JSON metadata from the Spotify Web API. Instead of manually setting up the POST and Get methods in 
+ Python we can use the this library to simply retrieve the JSON data as an alternative to the previous setup mentioned in Spotify Web API section.
+ 
+ #### Installation
+ 1) `pip install spotipy --upgrade`
+ 
+ #### Setup
+ 1) Follow the steps in the [Docs](https://spotipy.readthedocs.io/en/2.16.1/#client-credentials-flow) to setup the Client Credentials Flow.
+ 2) Refer to [API reference](https://spotipy.readthedocs.io/en/2.16.1/#api-reference) on how to retrieve the JSON format as neeed
+ 
+ 
+### Hiding your Client ID and Secret Key via the .env file
+---
+  ### Installation
+  1) `sudo pip install -U python-dotenv`
+
+  ### Setup
+  1) Create a `.env` file in you project folder which is in the same directory as your `cred.py` file
+  2) In the file `.env` write the following:
+     1. `export client_id='your client id'`
+     2. `export client_secret='your client secret'`
+  3) In `cred.py` import and include the following:
+     1. `from dotenv import load_dotenv, find_dotenv
+     2. `import os`
+     3. `load_dotenv(find_dotenv())`
+     4. `os.getenv('cliend_id')`
+     5. `os.getenv('client_secret')`
+ 
  
   
 
