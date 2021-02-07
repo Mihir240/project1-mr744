@@ -95,7 +95,10 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
    and this would create an overlap between the card and background (essentially placing it out of its correct place in the HTML).
 
 ## Improving the Project in the future
-1) 
+1) To enhance the project in the future, I would like to learn how develop an algorithm to find related artists in relation to the selected one and recommend their top tracks 
+   at the bottom of the page.
+2) I would like to add additionally information about the artist. Information which is like unique facts about the arists, like what is their favourite food, show
+   or sport to play.
  
   
 
