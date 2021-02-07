@@ -1,8 +1,4 @@
 body{
-    /*background-color: #64b5f6;*/
-    /*background-color: #F8F9FA;*/
-    /*background-color: #c0c5ce;*/
-    /*background-color: rgba(60, 60, 60, 0.5);*/
     background-color: #e6e6e7;
     font-family: Arial;
 }
@@ -41,8 +37,6 @@ img.track-align{
 }
 
 audio.audio-align{
-    /*position: relative;*/
-    /*left: 1.5rem;*/
     width: 22rem;
 }
 
