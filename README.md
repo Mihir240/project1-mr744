@@ -59,10 +59,10 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
  
 ### Hiding your Client ID and Secret Key via the .env file
 ---
-  ### Installation
+  #### Installation
   1) `sudo pip install -U python-dotenv`
 
-  ### Setup
+  #### Setup
   1) Create a `.env` file in you project folder which is in the same directory as your `cred.py` file
   2) In the file `.env` write the following:
      1. `export client_id='your client id'`
@@ -92,7 +92,8 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
 
 ## Known Problems
 1) One slight issue with my project but one that won't impact the functionality is when a song name is too long. The song name would push down the artist name in the HTML file 
-   and this would create an overlap between the card and background (essentially placing it out of its correct place in the HTML).
+   and this would create an overlap between the card and background (essentially placing it out of its correct place in the HTML). One approach I could take to fix this issue is
+   use the [bootstrap framework](https://getbootstrap.com/docs/5.0/getting-started/introduction/) so the cards would dynamically size up based on the text.
 
 ## Improving the Project in the future
 1) To enhance the project in the future, I would like to learn how develop an algorithm to find related artists in relation to the selected one and recommend their top tracks 
