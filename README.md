@@ -59,10 +59,10 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
  
 ### Hiding your Client ID and Secret Key via the .env file
 ---
-  ### Installation
+  #### Installation
   1) `sudo pip install -U python-dotenv`
 
-  ### Setup
+  #### Setup
   1) Create a `.env` file in you project folder which is in the same directory as your `cred.py` file
   2) In the file `.env` write the following:
      1. `export client_id='your client id'`
@@ -92,13 +92,16 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
 
 ## Known Problems
 1) One slight issue with my project but one that won't impact the functionality is when a song name is too long. The song name would push down the artist name in the HTML file 
-   and this would create an overlap between the card and background (essentially placing it out of its correct place in the HTML).
+   and this would create an overlap between the card and background (essentially placing it out of its correct place in the HTML). One approach I could take to fix this issue is
+   use the [Bootstrap framework](https://getbootstrap.com/docs/5.0/getting-started/introduction/) and use their card template. The card template would prove to be useful because 
+   it dynamically resizes given the text length.
 
 ## Improving the Project in the future
-1) To enhance the project in the future, I would like to learn how develop an algorithm to find related artists in relation to the selected one and recommend their top tracks 
-   at the bottom of the page.
-2) I would like to add additionally information about the artist. Information which is like unique facts about the arists, like what is their favourite food, show
-   or sport to play.
+1) To enhance the project in the future, I would like to add related artists in relation to the selected one and recommend their top tracks 
+   at the bottom of the page. I could implement these features by using the Spotify Web API as they have a related artists endpoint.
+2) I would like to add additional information about the artist. Information like where they are born, how old they are and their overall background.
+   One way I could implement this is by using the [Wikepedia API](https://www.mediawiki.org/wiki/API:Main_page). Using this I would be able to retrieve general information 
+   needed and which Wikepedia generally has for well known artists. Additionally, I found this [stackoverflow page](https://stackoverflow.com/questions/7185288/how-to-get-wikipedia-content-using-wikipedias-api) talking about the different ways to extract information about certain topics in general.
  
   
 
