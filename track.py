@@ -1,12 +1,14 @@
 import random
+from cred import gen_obj
 
 
 class Track:
-    def __init__(self,song_name=None,song_artist=None,song_image=None,song_prev_url=None):
+    def __init__(self,song_name=None,song_artist=None,song_image=None,song_prev_url=None,lyrics_url=None):
         self.song_name = song_name
         self.song_artist = song_artist
         self.song_image = song_image
         self.song_prev_url = song_prev_url
+        self.song_lyrics = lyrics_url
 
     def get_song_name(self):
         return self.song_name
@@ -19,6 +21,11 @@ class Track:
         
     def get_song_prev_url(self):
         return self.song_prev_url
+    
+    def get_song_lyrics(self):
+        return self.song_lyrics
+        
+    
 
 
 #------------------END OF CLASS----------------------#
@@ -43,6 +50,7 @@ def extract_track_info(json_obj: dict) -> list:
                 song_artist,
                 song_image,
                 song_url,
+                gen_obj(song_name),
                 )
             )
             
