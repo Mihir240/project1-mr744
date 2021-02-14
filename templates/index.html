@@ -6,10 +6,17 @@
   
     </head>
     <body>
-        
-        <div class="jumbo"> 
-            <img src="{{artist_info[0]}}"  class='front-img'></img>
-            <h1>{{artist_info[1]}}</h1>
+        <div class="intro">
+            <div>
+                <img class="logo" src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-green-logo-8.png"></img>
+            </div>
+            <div class="jumbo"> 
+                <img src="{{artist_info[0]}}"  class='front-img'></img>
+                <h1>{{artist_info[1]}}</h1>
+            </div>
+            <div class="popular">
+                <h2>{{artist_info[2]}}</h2>
+            </div>
         </div>
         
         <div class='list-tracks'>
@@ -19,6 +26,7 @@
                    <audio class='audio-align' controls src={{all_tracks[i].get_song_prev_url()}}> </audio>
                    <h3 class='song-text'>{{all_tracks[i].get_song_name()}}</h3>
                    <h4 class='song-text'>By {{all_tracks[i].get_song_artist()}}</h4>
+                   <a class='lyrics' href="{{all_tracks[i].get_song_lyrics()}}"> Lyrics </a>
               </div>
         {%endfor%} 
         </div>

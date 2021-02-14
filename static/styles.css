@@ -1,6 +1,11 @@
 body{
-    background-color: #e6e6e7;
+    /*background-color: #e6e6e7;*/
+    /*background-color: #c2cad7;*/
+    /*background-color: #1ED761;*/
+    /*background-image:url(https://wallpaperaccess.com/full/1981450.jpg);*/
+    background-image:url(https://cdn.suwalls.com/wallpapers/abstract/gray-blur-43859-2560x1600.jpg);
     font-family: Arial;
+    background-attachment:fixed;
 }
 
 img.front-img{
@@ -21,6 +26,7 @@ div.jumbo{
     margin: auto;
     margin-top:2rem;
     border-radius: 1.25rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 h1{
@@ -42,21 +48,85 @@ audio.audio-align{
 
 div.cover{
     background-color: white;
-    /*display: inline-grid;*/
     width: 22rem;
-    height: 30rem;
+    height: 34rem;
     border-radius: 1.125rem;
+    transition: transform .2s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cover:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    filter:blur(3px);
 }
 
 .song-text{
-    display: flex;
-    justify-content: center;
+    text-align:center;
 }
 
 .list-tracks{
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 2rem;
+    top: 4rem;
     margin-bottom: 10rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    
+    /*box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
+    border-radius: 1.25rem;
+    padding: 2rem 0;
+    /*position: relative;*/
+    /*background: inherit;*/
+    /*z-index:1;*/
 }
+
+/*.list-tracks:before{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    background: inherit;*/
+/*    top:0;*/
+/*    left:0;*/
+/*    right:0;*/
+/*    bottom:0;*/
+/*    box-shadow: inset 0 0 2000px rgba(255,255,255,0.5);*/
+/*    filter: blur(3px);*/
+/*    z-index:-1;*/
+    
+/*}*/
+
+.lyrics{
+    position: relative;
+    left: 9rem;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    padding: 7.5px 16px;
+}
+.logo{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 1.25rem;
+    background-color: white;
+    position: relative;
+    top: 0.75rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.intro{
+    display:flex;
+    justify-content: space-around;
+}
+
+h2{
+    display: inline;
+    background-color: white;
+    color: #1ED761;
+    font-size: 5rem;
+    border-radius: 1.25rem;
+    position: relative;
+    padding: 0.5rem;
+    top: 1rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
