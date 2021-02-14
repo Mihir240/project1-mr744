@@ -31,7 +31,7 @@ def main_app():
     #retrieving artist info
     artist = spotify_obj.artist(selected_id)
                         # artist pic                 #artist name
-    info_of_artist = [artist['images'][2]['url'], artist['name']  ]
+    info_of_artist = [artist['images'][2]['url'], artist['name'], artist['popularity']]
 
     return render_template(
         'index.html',

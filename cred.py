@@ -13,7 +13,6 @@ def spot_obj():
     
 def gen_obj(song_name=None)->str:
     
-    # song_name = "better now"
     url = f"https://api.genius.com/search?q={song_name}"
     
     headers = {
@@ -27,5 +26,3 @@ def gen_obj(song_name=None)->str:
     #get the song lyrics url 
     lyrics = song_lyrics.json()['response']['hits'][0]['result']['url']
     return lyrics
-
-gen_obj("Better Now")
