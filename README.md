@@ -75,7 +75,46 @@ In this project, I used the Flask Framework, Spotify Web API, and Spotipy librar
      5. `os.getenv('client_secret')`
    4) Don't forget to add your `.env` file to the `.gitignore` file
    
-   
+### Genius Web API
+---
+#### About
+Genius API will allow us to use its endpoints to retrieve JSON metadata related to an song, artists or albums. This will be useful for our project so that we can retrieve lyrics 
+page url.
+
+#### Setup
+1) Create an free developer account from [Genius](https://genius.com/signup)
+2) Once done creating an account, create the [authentication flow](https://docs.genius.com/#/getting-started-h1) following a similar process we did with Spotify. We will use the 
+   "Access for Apps Without Users" portion of the page for authentication. 
+3) Use the [Search end point](https://docs.genius.com/#search-h2) to retrieve JSON metadata with the urllink to the lyrics simply by search the song.
+
+### Deploying our App with Heroku
+---
+ #### About
+ Heroku is a cloud platform company which will allow us to host our spotify app on their servers for free! Please note that there are also premium services within Heroku but we 
+ will not be using those tiers. 
+ 
+ #### Installation
+ 1) `npm install -g heroku`
+ 
+ #### Setup 
+ 1) First we will need to create a free account on [Heroku](https://www.heroku.com/).
+ 2) Next, we will create a  `requirements.txt` file which will list all the libraries and packages our app uses. This information is needed because Heroku's servers will 
+    download said packages and libraries so it can run the app on their servers.
+    In your terminal, type the following:
+    1. `touch requirements.txt`
+    2. `pip freeze > requirements.txt`
+ 3) Once that is done, we will need a `Procfile`, which is a file that will tell Heroku what command to use to run our app.
+    1. In your terminal, type: `touch Procfile`
+    2. Next, open up the `Procfile` and type your commands needed to run your app. In my case I would write: `web: python main.py`. 
+ 4) Now for the actual deploying part, open your terminal and follow along:
+    1. Login to Heroku via terminal: `heroku login -i`
+    2. Next go to your project folder and create the heroku app: `heroku create`
+    3. Now we will push our code to heroku: `git push heroku main` or `git push heroku master`
+ 5) Although we have pushed our code, we still need to setup our API token Key!
+    1. Head over to the Heroku website dashboard then find `settings`. 
+    2. Once in settings, look for `Config Vars` and click on `Reveal Config Vars`.
+    3. Then set your Spotify and Genius keys accordingly. Once added, the app should be ready to go!
+     
 ## Technical Issue Encountered in My Project and Fixes
 1) One simple mistake but was quite time consuming mistake I faced was forgetting to add the line `load_dotenv(find_dotenv())` in my `cred.py` file. This caused much frustration 
    because I was getting invalid credential errors and was therefore not able to access the Web API. To resolve this issue, I first hardcoded my client_secret and client_id to 
