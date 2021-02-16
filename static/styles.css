@@ -81,6 +81,10 @@ div.cover{
     border-radius: 6px;
     padding: 7.5px 16px;
 }
+.lyrics:hover{
+    background-color:#1ED761;
+    
+}
 .logo{
     width: 7rem;
     height: 7rem;
